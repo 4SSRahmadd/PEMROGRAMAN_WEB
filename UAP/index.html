@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAP</title>
+</head>
+<body>
+    <h2>TOKO SUMBER BERKAH</h2>
+<table border="2">
+    <tr>
+        <th>Kode</th>
+        <th>Barang</th>
+        <th>Harga</th>
+    </tr>
+    <tr>
+        <td>001</td>
+        <td>Barang A</td>
+        <td>10.000</td>
+    </tr>
+    <tr>
+        <td>002</td>
+        <td>Barang B</td>
+        <td>20.000</td>
+    </tr>
+    <tr>
+        <td>003</td>
+        <td>Barang C</td>
+        <td>30.000</td>
+    </tr>
+</table>
+<table border="2">
+    <h1>BADHE TUMBAS</h1>
+    <tr>
+        <td>
+            <label for="kode">Masukkan Kode</label>
+        </td>
+        <td>
+            :
+        </td>
+        <td>
+            <input type="text" id="kode" required>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="banyak">Banyak Barang:</label>
+        </td>
+        <td>
+            :
+        </td>
+        <td>
+            <input type="text" id="banyak" required>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" onclick=total() style="background-color: yellow;" >Submit</button>
+        </td>
+    </tr>
+</table>
+<script>
+    function total(){
+        var kode = document.getElementById("kode").value;
+        var banyak = document.getElementById("banyak").value;
+
+        var harga = 0;
+        switch (kode){
+            case "001":
+            harga = 10000;
+            break;
+            case "002":
+            harga = 20000;
+            break;
+            case "003":
+            harga = 30000;
+            break;
+            default:
+                alert("PILIH MENU YANG TERSEDIA");
+            return;
+        }
+
+        var total = harga * banyak;
+        alert("Total Pembayaran anda sebesar: " + total);
+
+        var inputUang = prompt("Masukkan Uang anda");
+        if (isNaN(inputUang)){
+            alert("KUBILANG UANG YA UANG HMM aokawoa");
+            return;
+        }
+
+        var kembalian = inputUang - total;
+        if (kembalian >= 0){
+            alert("Kembalianmu sebesar : " + kembalian);
+        } else{
+            alert("Jumlah uangmu tidak cukup")
+        }
+        setTimeout(function(){
+            location.reload();
+        }, 1000);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+.hero{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-image: url(asset/hero.jpg);
+    height: 720px;
+}
+.caption{
+    margin-top: 200px;
+    margin-left: 150px;
+    color: white;
+}
+.footer{
+    margin-top: 45px;
+}
+.top-foot{
+    color: grey;
+    margin-bottom: 30px;
+}
+.logo{
+    width: 20px;
+    margin-right: 7px;
+}
+.logo-pesbuk{
+    width: 15px;
+    margin-right: 13px;
+}
+.btn-primary{
+    background-color: #0077b6 !important;
+    padding: 5px;
+    border-radius: 8px;
+    color:white;
+}
+.btn{
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.nav-link{
+    color: black !important;
+}
